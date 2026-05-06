@@ -1,0 +1,28 @@
+{
+  "repo": "zigsdf",
+  "language": "Zig",
+  "category": "Graphics",
+  "goal": "Generate signed-distance samples for circles, boxes, and glyph-like fixtures.",
+  "weights": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 164,
+    "watch": 124
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "repo": "zigsdf",
+  "language": "Zig",
+  "category": "Graphics",
+  "case_count": 5,
+  "score_formula": "signal * 2 + slack + confidence - drag * 3",
+  "lane_thresholds": {
+    "ship": 140,
+    "watch": 105
+  },
+  "read_order": [
+    "README.md",
+    "fixtures/domain_review.csv",
+    "metadata/domain-review.json",
+    "examples/zigsdf-walkthrough.md"
+  ],
+  "first_question": "Does geometry span still dominate the review result?",
+  "second_question": "Is shader drift being penalized hard enough before render budget is trusted?",
+  "highest_case": {
+    "name": "stale",
+    "focus": "geometry span",
+    "score": 199
+  },
+  "lowest_case": {
+    "name": "stress",
+    "focus": "atlas pressure",
+    "score": 144
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "repo": "zigsdf",
+  "language": "Zig",
+  "category": "Graphics",
+  "goal": "Generate signed-distance samples for circles, boxes, and glyph-like fixtures.",
+  "review_model": {
+    "terms": [
+      "geometry span",
+      "atlas pressure",
+      "shader drift",
+      "render budget"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "geometry span",
+      "signal": 62,
+      "slack": 20,
+      "drag": 21,
+      "confidence": 69,
+      "score": 150,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "atlas pressure",
+      "signal": 76,
+      "slack": 22,
+      "drag": 31,
+      "confidence": 63,
+      "score": 144,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "shader drift",
+      "signal": 70,
+      "slack": 22,
+      "drag": 12,
+      "confidence": 49,
+      "score": 175,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "render budget",
+      "signal": 57,
+      "slack": 24,
+      "drag": 17,
+      "confidence": 71,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "geometry span",
+      "signal": 78,
+      "slack": 42,
+      "drag": 21,
+      "confidence": 64,
+      "score": 199,
+      "lane": "ship"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "index": 62,
+  "phase": 1,
+  "batch": 7,
+  "name": "zigsdf",
+  "planned_name": "zigsdf",
+  "language": "Zig",
+  "category": "Graphics",
+  "goal": "Generate signed-distance samples for circles, boxes, and glyph-like fixtures.",
+  "repository_url": "https://github.com/ZachL111/zigsdf",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 166,
+    "risk_penalty": 6,
+    "latency_penalty": 2,
+    "weight_bonus": 5,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
